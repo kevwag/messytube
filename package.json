@@ -1,26 +1,22 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.1.5",
-  "description": "A sample Node.js app using Express 4",
-  "main": "index.js",
+  "name": "messytube",
+  "version": "2.0.0",
+  "description": "A barebones Node.js app using [Express 4](http://expressjs.com/).",
+  "main": "web.js",
   "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "ejs": "2.3.3",
-    "express": "4.13.3"
-  },
-  "engines": {
-    "node": "0.12.7"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "git@heroku.com:messytube.git "
   },
   "keywords": [
-    "node",
-    "heroku",
-    "express"
+    "DJ",
+    "Messy",
+    "MessyTube",
+    "YouTube",
+    "Music"
   ],
-  "license": "MIT"
+  "author": "DJ Messy",
+  "license": "ISC"
 }
