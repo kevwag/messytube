@@ -1,6 +1,6 @@
 {
   "name": "messytube",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "A barebones Node.js app using [Express 4](http://expressjs.com/).",
   "main": "web.js",
   "scripts": {
@@ -8,15 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@heroku.com:messytube.git "
+    "url": "git@heroku.com:messytube.git"
   },
-  "keywords": [
-    "DJ",
-    "Messy",
-    "MessyTube",
-    "YouTube",
-    "Music"
-  ],
-  "author": "DJ Messy",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "engines": { "node": "4.2.3"  }
 }
