@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+  <head>
+	<style type="text/css">
+	</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+
+    <title>MessyTube</title>
+    <link rel="stylesheet" href="stylesheets/screen.css" media="Screen" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />
+
+    <!--[if IEMobile]>
+    <link rel="stylesheet" href="mobile.css" media="screen" type="text/css"  />
+    <![endif]-->
+
+    <!-- These are Open Graph tags.  They add meta data to your  -->
+    <!-- site that facebook uses when your content is shared     -->
+    <!-- over facebook.  You should fill these tags in with      -->
+
+    <!-- your data.  To learn more about Open Graph, visit       -->
+    <!-- 'https://developers.facebook.com/docs/opengraph/'       -->
+    <meta property="og:title" content="MessyTube for Facebook" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://apps.facebook.com/messytube/" />
+    <meta property="og:image" content="http://messytube.herokuapp.com/images/DJMessyGreenLaserYoutube.jpg" />
+    <meta property="og:site_name" content="MessyTube" />
+    <meta property="og:description" content="DJ Messy's YouTube Channel" />
+    <meta property="fb:app_id" content="490019527740859" />
+
+    <script type="text/javascript" src="/scripts/jquery.min.js"></script>
+	<!-- Thumbnail Script -->
+	<script type="text/javascript">
+		$("document").ready(function() {
+			var linkToYouTube = "https://www.youtube.com/embed/";
+			$('.ytThumb').bind('click',changeTheVideo);
+			function changeTheVideo() {
+				var videoCode = $(this).attr('alt');
+				var newVideoLoc = linkToYouTube + videoCode + "?wmode=transparent";
+				$('#ytVideo').attr("src", newVideoLoc);
+			}
+		});
+	</script>
+	<!-- End Of Thumbnail Script -->
+	<!-- Event Handling: -->
+    <script type="text/javascript">
+	function logResponse(response) {
+		// Event Logging:
+        if (console && console.log) {
+          console.log('The response was', response);
+        }
+      }
+      $(function(){
+        // Event Handlers For FB Share Buttons
+		// Post To Wall:
+        $('#postToWall').click(function() {
+          FB.ui(
+            {
+              method : 'feed',
+              link   : $(this).attr('data-url')
+            },
+            function (response) {
+              // If response is null the user canceled the dialog
+              if (response != null) {
+                logResponse(response);
+              }
+            }
+          );
+        });
+		// Send To Friends:
+        $('#sendToFriends').click(function() {
+          FB.ui(
+            {
+              method : 'send',
+              link   : $(this).attr('data-url')
+            },
+            function (response) {
+              // If response is null the user canceled the dialog
+              if (response != null) {
+                logResponse(response);
+              }
+            }
+          );
+        });
+		// Send App Request:
+        $('#sendRequest').click(function() {
+          FB.ui(
+            {
+              method  : 'apprequests',
+              message : $(this).attr('data-message')
+            },
+            function (response) {
+              // If response is null the user canceled the dialog
+              if (response != null) {
+                logResponse(response);
+              }
+            }
+          );
+        });
+      });
+    </script>
+    <!--[if IE]>
+      <script type="text/javascript">
+        var tags = ['header', 'section'];
+        while(tags.length)
+          document.createElement(tags.pop());
+      </script>
+    <![endif]-->
+  </head>
+  <body bgcolor="#000000">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+	  appId      : '490019527740859',
+	  channelUrl : '//messytube.herokuapp.com/channel.php', // Channel File
+	  status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true,
+      version    : 'v2.0'
+    });
+
+    // ADD ADDITIONAL FACEBOOK CODE BELOW HERE
+	// Place following code after FB.init call.
+
+function onLogin(response) {
+  if (response.status == 'connected') {
+    FB.api('/me?fields=first_name', function(data) {
+      var welcomeBlock = document.getElementById('fb-welcome');
+      welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+    });
+  }
+}
+
+FB.getLoginStatus(function(response) {
+  // Check login status on load, and if the user is
+  // already logged in, go directly to the welcome message.
+  if (response.status == 'connected') {
+    onLogin(response);
+  } else {
+    // Otherwise, show Login dialog first.
+    FB.login(function(response) {
+      onLogin(response);
+    }, {scope: 'user_friends, email'});
+  }
+});
+    // ADD ADDITIONAL FACEBOOK CODE ABOVE HERE
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+   <header class="clearfix">
+   
+	    <!-- <% if (user) { %>--> -->
+		<h1 id="fb-welcome"></h1>
+      <p id="picture" style="background-image: url(https://graph.facebook.com/<%= user.id %>/picture?type=normal)"></p>
+
+      <div>
+        <h1>Welcome, <strong><%= user.name %></strong></h1>
+        <p class="tagline">
+          This is:
+          <a href="http://apps.facebook.com/messytube/" target="_top">MessyTube</a>
+        </p>
+	  <p>
+	   <br />
+	   <h2>DJ Messy's YouTube Channel - Click the Thumbnails to select video:</h2>
+		<script type="text/javascript">
+		<!--
+			var insertBrk = 1;
+			var arrayOfVideos =
+			["3B6PCpjBVS8","I6n7gbIYwwA","3H8h_Bj9Z18","jK3KfzpuO7s"];
+			var arrayOfTitles =
+			["Hard Trance","Hardstyle","Hard Trance","Hard Trance"];
+			document.write('<br />');
+			for(i in arrayOfVideos)
+			{
+				document.write('<img class="ytThumb" src="https://img.youtube.com/vi/' + arrayOfVideos[i] + '/default.jpg" alt="' + arrayOfVideos[i] + '" />');
+				if(insertBrk == 3)
+					{
+						document.write('<br />');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-2] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-1] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<br />');
+						insertBrk = 0;
+					}
+				insertBrk++;
+			}
+		-->
+		</script>
+	  </p>
+		
+        <div id="share-app">
+          <p>Please Share This App:</p>
+          <ul>
+            <li>
+              <a href="#" class="facebook-button" id="postToWall" data-url="http://apps.facebook.com/messytube/">
+                <span class="plus">Post to Wall</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="http://apps.facebook.com/messytube/">
+                <span class="speech-bubble">Send Message <%= url() %></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Please try my app">
+                <span class="apprequests">Send Requests</span>
+              </a>
+            </li>
+          </ul>
+		 
+        </div>
+      </div>
+      <!-- <% } else { %> -->
+		      
+     	<fb:bookmark></fb:bookmark>
+		<div align="center">
+			<img src="/images/DJMessyGreenLaserYoutube.jpg">
+		</div>
+    			<div id="topVideo" align="center">
+				<iframe id="ytVideo" width="560" height="315" style="float:center" src="https://www.youtube.com/embed/3B6PCpjBVS8?wmode=transparent" allowfullscreen></iframe>
+			</div>
+		
+	<div align="center">
+
+
+Please login for more
+<br />
+			<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+	        <!-- <div class="fb-login-button" data-scope="user_about_me,user_location,user_photos"></div> -->
+
+
+
+
+
+
+
+
+
+
+	<br />
+		<br />
+	</div>
+    <div align="center">
+	  <div id="share-app" align="center">
+            <p><h3>Please share this app:</h3></p>
+			<p align="center">
+            <a href="#" class="facebook-button" id="postToWall" data-url="http://apps.facebook.com/messytube/">
+            <span class="plus">Post to Wall</span>
+            </a>
+            <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="http://apps.facebook.com/messytube/">
+            <span class="speech-bubble">Send Message</span>
+            </a>
+            <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Please Try My YouTube App!">
+            <span class="apprequests">Send Requests</span>
+            </a>
+			</p>
+			<br />
+			<p align="center">
+			<div class="fb-like" data-href="https://apps.facebook.com/messytube/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="verdana"></div>      
+			</p>
+			</div>
+	  	
+	</div>
+	<br />
+	<br />
+	  <div align="center">
+		<div id="fbcomments" align="center" valign="middle" width="0" height="260px"><fb:comments migrated="1" colorscheme="dark" height="260px" numposts="3" title="Comments" simple="1" align="center"></fb:comments></div>
+	  </div>
+    </header>
+	  <!-- <% } %> -->
+  </body>
+</html>
+
