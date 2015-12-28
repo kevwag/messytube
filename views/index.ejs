@@ -186,12 +186,11 @@ FB.getLoginStatus(function(response) {
       </div>
 	 
       <!-- <% } else { %> -->
-		      <!-- <% } %> -->
+		      
      	<fb:bookmark></fb:bookmark>
 		<div align="center">
 			<img src="/images/DJMessyGreenLaserYoutube.jpg">
 		</div>
-    </header>
     			<div id="topVideo" align="center">
 				<iframe id="ytVideo" width="560" height="315" style="float:center" src="https://www.youtube.com/embed/3B6PCpjBVS8?wmode=transparent" allowfullscreen></iframe>
 			</div>
@@ -204,12 +203,18 @@ FB.getLoginStatus(function(response) {
 			var insertBrk = 1;
 			var arrayOfVideos =
 			["3B6PCpjBVS8","I6n7gbIYwwA","3H8h_Bj9Z18","jK3KfzpuO7s"];
+			var arrayOfTitles =
+			["Trance","Hardstyle","Hardstyle","Hard Trance"];
 			document.write('<br />');
 			for(i in arrayOfVideos)
 			{
 				document.write('<img class="ytThumb" src="https://img.youtube.com/vi/' + arrayOfVideos[i] + '/default.jpg" alt="' + arrayOfVideos[i] + '" />');
 				if(insertBrk == 3)
 					{
+						document.write('<br />');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-2] + '&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-1] + '&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i] + '&nbsp;&nbsp;&nbsp;</font>');
 						document.write('<br />');
 						insertBrk = 0;
 					}
@@ -246,6 +251,8 @@ FB.getLoginStatus(function(response) {
 	  <div align="center">
 		<div id="fbcomments" align="center" valign="middle" width="0" height="260px"><fb:comments migrated="1" colorscheme="dark" height="260px" numposts="3" title="Comments" simple="1" align="center"></fb:comments></div>
 	  </div>
+    </header>
+	  <!-- <% } %> -->
   </body>
 </html>
 
