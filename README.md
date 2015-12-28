@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # messytube
 
 A Node.js app using [Express 4](http://expressjs.com/).
@@ -30,9 +29,7 @@ or
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-## Documentation
 
 
 =======
 # messytube
->>>>>>> 
