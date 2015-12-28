@@ -204,7 +204,7 @@ FB.getLoginStatus(function(response) {
 			var arrayOfVideos =
 			["3B6PCpjBVS8","I6n7gbIYwwA","3H8h_Bj9Z18","jK3KfzpuO7s"];
 			var arrayOfTitles =
-			["Trance","Hardstyle","Hardstyle","Hard Trance"];
+			["Hard Trance","Hardstyle","Hard Trance","Hard Trance"];
 			document.write('<br />');
 			for(i in arrayOfVideos)
 			{
@@ -212,9 +212,9 @@ FB.getLoginStatus(function(response) {
 				if(insertBrk == 3)
 					{
 						document.write('<br />');
-						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-2] + '&nbsp;&nbsp;&nbsp;</font>');
-						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-1] + '&nbsp;&nbsp;&nbsp;</font>');
-						document.write('<font color ="green" size="-1">' + arrayOfTitles[i] + '&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-2] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-1] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
 						document.write('<br />');
 						insertBrk = 0;
 					}
