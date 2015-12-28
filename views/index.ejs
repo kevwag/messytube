@@ -161,7 +161,35 @@ FB.getLoginStatus(function(response) {
           This is:
           <a href="http://apps.facebook.com/messytube/" target="_top">MessyTube</a>
         </p>
-
+	  <p>
+	   <br />
+	   <h2>DJ Messy's YouTube Channel - Click the Thumbnails to select video:</h2>
+		<script type="text/javascript">
+		<!--
+			var insertBrk = 1;
+			var arrayOfVideos =
+			["3B6PCpjBVS8","I6n7gbIYwwA","3H8h_Bj9Z18","jK3KfzpuO7s"];
+			var arrayOfTitles =
+			["Hard Trance","Hardstyle","Hard Trance","Hard Trance"];
+			document.write('<br />');
+			for(i in arrayOfVideos)
+			{
+				document.write('<img class="ytThumb" src="https://img.youtube.com/vi/' + arrayOfVideos[i] + '/default.jpg" alt="' + arrayOfVideos[i] + '" />');
+				if(insertBrk == 3)
+					{
+						document.write('<br />');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-2] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-1] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<font color ="green" size="-1">' + arrayOfTitles[i] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
+						document.write('<br />');
+						insertBrk = 0;
+					}
+				insertBrk++;
+			}
+		-->
+		</script>
+	  </p>
+		
         <div id="share-app">
           <p>Please Share This App:</p>
           <ul>
@@ -194,35 +222,21 @@ FB.getLoginStatus(function(response) {
     			<div id="topVideo" align="center">
 				<iframe id="ytVideo" width="560" height="315" style="float:center" src="https://www.youtube.com/embed/3B6PCpjBVS8?wmode=transparent" allowfullscreen></iframe>
 			</div>
+		
 	<div align="center">
-	  <p>
-	   <br />
-	   <h2>DJ Messy's YouTube Channel - Click the Thumbnails to select video:</h2>
-		<script type="text/javascript">
-		<!--
-			var insertBrk = 1;
-			var arrayOfVideos =
-			["3B6PCpjBVS8","I6n7gbIYwwA","3H8h_Bj9Z18","jK3KfzpuO7s"];
-			var arrayOfTitles =
-			["Hard Trance","Hardstyle","Hard Trance","Hard Trance"];
-			document.write('<br />');
-			for(i in arrayOfVideos)
-			{
-				document.write('<img class="ytThumb" src="https://img.youtube.com/vi/' + arrayOfVideos[i] + '/default.jpg" alt="' + arrayOfVideos[i] + '" />');
-				if(insertBrk == 3)
-					{
-						document.write('<br />');
-						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-2] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
-						document.write('<font color ="green" size="-1">' + arrayOfTitles[i-1] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
-						document.write('<font color ="green" size="-1">' + arrayOfTitles[i] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>');
-						document.write('<br />');
-						insertBrk = 0;
-					}
-				insertBrk++;
-			}
-		-->
-		</script>
-		<br />
+
+
+Please login for more
+
+
+
+
+
+
+
+
+
+	<br />
 		<br />
 	</div>
     <div align="center">
