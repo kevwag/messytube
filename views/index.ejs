@@ -111,9 +111,12 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '490019527740859',
+	  appId      : '490019527740859',
+	  channelUrl : '//messytube.herokuapp.com/channel.php', // Channel File
+	  status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true,
-      version    : 'v2.5'
+      version    : 'v2.0'
     });
 
     // ADD ADDITIONAL FACEBOOK CODE BELOW HERE
@@ -227,6 +230,10 @@ FB.getLoginStatus(function(response) {
 
 
 Please login for more
+<br />
+			<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+	        <!-- <div class="fb-login-button" data-scope="user_about_me,user_location,user_photos"></div> -->
+
 
 
 
