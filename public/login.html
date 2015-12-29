@@ -151,8 +151,10 @@
 	document.write('</div>');
 	document.write('</body>');
 	document.write('</html>');
-    FB.login();
-  }
+    FB.login(function(response) {
+      onLogin(response);
+    }, {scope: 'user_friends, email'});
+ }
 });
 	// Place following code after FB.init call.
 
