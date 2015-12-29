@@ -1,0 +1,272 @@
+/*
+  title: base css
+*/
+
+
+/* =global elements
+--------------------------------------------- */
+body {
+	vertical-align: top;
+	bgcolor: #000;
+	color: #FF0;
+	-webkit-font-smoothing: antialiased;
+	width: 720px;
+	margin: 20px;
+	background-color: #000;
+	overflow: auto;
+	position: relative;
+	visibility: visible;
+	left: auto;
+	top: auto;
+	right: auto;
+	bottom: auto;
+	font-family: "Lucida Grande", Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 1.5em;
+	font-weight: normal;
+	font-variant: normal;
+	text-decoration: none;
+}
+
+a:link, a:visited {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  color: #FFFF00;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+h2 {
+  text-align: center;
+  color: #FFCC00;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+h3 {
+  text-align: center;
+  color: #FFFF00;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+h4 {
+  text-align: center;
+  color: #FFCC00;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+p {
+  text-align: center;
+  color: #FFFF00;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+
+}
+
+span {
+  text-align: center;
+}
+
+iframe {
+  float: center;
+}
+
+/* ------------------------------------------ */
+
+/* =header
+--------------------------------------------- */
+header {
+	font-size: 11px;
+	padding: 24px 18px;
+	alignment-adjust: auto;
+}
+
+header h1 {
+  margin: 0 0 9px;
+  padding: 2px 0 8px;
+}
+
+header #picture + div {
+  margin-left: 82px;
+}
+
+header #picture {
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  background-size: 64px;
+  float: left;
+  margin-right: 18px;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+}
+
+header .tagline {
+  float: left;
+}
+
+#share-app {
+  float: center;
+  text-align: center;
+  width: 344px;
+}
+
+#share-app ul {
+  text-align: center;
+}
+
+#share-app p {
+  text-align: center;
+  margin-left: 8px;
+}
+
+#share-app li {
+  text-align: center;
+  list-style: none;
+  margin-left: 8px;
+}
+
+#fbcomments {
+	width: 550px;
+	height: *;
+	float: center;
+	text-align: center;
+	border-style: solid;
+	border-color: #00FF00;
+	border-width: 4px;
+	border-radius: 15px;
+}
+
+/* ------------------------------------------ */
+
+/* =thumbnails and video
+--------------------------------------------- */
+
+.ytThumb {
+	border-style: solid;
+	border-color: #00FF00;
+	border-width: 3px;
+	margin: 5px;
+	margin-right: 20px;
+	margin-left: 22px;
+	border-radius: 15px;
+}
+
+#topVideo {
+  float: center;
+  align: middle;
+}
+
+#ytVideo {
+	float: center;
+	border-style: solid;
+	border-color: #00FF00;
+	border-width: 4px;
+	border-radius: 15px;
+}
+
+/* ------------------------------------------ */
+
+/* =buttons
+--------------------------------------------- */
+.facebook-button:link, .facebook-button:visited {
+  background-color: #eee;
+  background-image: -moz-linear-gradient(top, #fdfdfd, #eaebeb);
+  background-image: -ms-linear-gradient(top, #fdfdfd, #eaebeb);
+  background-image: -o-linear-gradient(top, #fdfdfd, #eaebeb));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#eaebeb));
+  background-image: -webkit-linear-gradient(top, #fdfdfd, #eaebeb);
+  background-image: linear-gradient(top, #fdfdfd, #eaebeb);
+  border: 1px solid #a9a9a9;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  color: #4f4f4f;
+  display: -moz-inline-box;
+  display: inline-block;
+  font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .33);
+}
+
+.facebook-button span {
+  background: url("../images/sprites.png") no-repeat;
+  padding: 0 7px 0 21px;
+}
+
+.facebook-button .speech-bubble {
+  background-position: 6px 3px;
+}
+
+.facebook-button .plus {
+  background-position: 6px -17px;
+}
+
+.facebook-button .apprequests {
+  background-position: 6px -37px;
+}
+
+.button:link, .button:visited {
+  background-color: #7a90c0;
+  background-image: -moz-linear-gradient(top, #97afe2, #6073a1);
+  background-image: -ms-linear-gradient(top, #97afe2, #6073a1);
+  background-image: -o-linear-gradient(top, #97afe2, #6073a1);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#97afe2), to(#6073a1));
+  background-image: -webkit-linear-gradient(top, #97afe2, #6073a1);
+  background-image: linear-gradient(top, #97afe2, #6073a1);
+  border: none;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .5), 0 1px 1px rgba(255, 255, 255, .33) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .5), 0 1px 1px rgba(255, 255, 255, .33) inset;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .5), 0 1px 1px rgba(255, 255, 255, .33) inset;
+  color: #1d222c;
+  display: inline-block;
+  font: bold 14px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+  line-height: 32px;
+  padding: 0 25px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .2);
+}
+
+
+/* ------------------------------------------ */
+
+/* =clearfix
+--------------------------------------------- */
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	visibility: visible;
+}
+
+.clearfix {
+  zoom: 1;
+}
