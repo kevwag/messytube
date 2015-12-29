@@ -104,9 +104,11 @@
     });
 
     // ADD ADDITIONAL FACEBOOK CODE BELOW HERE
-	FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    console.log('Logged in.'); 
+	function onLogin(response) {
+  if (response.status == 'connected') {
+    FB.api('/me?fields=first_name', function(data) {
+//      var welcomeBlock = document.getElementById('fb-welcome');
+//      welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
 	document.write('<html>');
 	document.write('<head>');
 	document.write('<title>Messytube Extras</title>');
@@ -128,6 +130,15 @@
 	document.write('</div>');
 	document.write('</body>');
 	document.write('</html>');
+
+    });
+  }
+}
+
+
+	FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    console.log('Logged in.'); 
   }
   else {
 	document.write('<html>');
