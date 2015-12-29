@@ -130,11 +130,19 @@
 			<img src="/images/DJMessyGreenLaserYoutube.jpg">
 		</div>
   </header>
-<h1>Content</h1>
-<footer class="clearfix">
-  <div align="center">
-  <div id="fbcomments" align="center" valign="middle" width="0" height="260px"><fb:comments migrated="1" colorscheme="dark" height="260px" numposts="3" title="Comments" simple="1" align="center"></fb:comments></div>
-  </div>
+ <% if (user) { %>
+ <div align="center">
+    <h1 id="fb-welcome"></h1>
+ 	Logged IN
+ </div>
+ <% } else { %>
+ <div align="center">
+ 	Please Login
+	    <div class="fb-login-button" data-scope="user_about_me,user_location,user_photos"></div>
+    	<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
 
+ </div>
+ 
+<% } %>
 </body>
 </html>
