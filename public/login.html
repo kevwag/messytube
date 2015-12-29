@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<style type="text/css">
+	</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Messytube Extras</title>
+    <link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/screen.css" media="Screen" type="text/css" />
+    <link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />
+
+    <!--[if IEMobile]>
+    <link rel="stylesheet" href="mobile.css" media="screen" type="text/css"  />
+    <![endif]-->
+
+    <!-- These are Open Graph tags.  They add meta data to your  -->
+    <!-- site that facebook uses when your content is shared     -->
+    <!-- over facebook.  You should fill these tags in with      -->
+
+    <!-- your data.  To learn more about Open Graph, visit       -->
+    <!-- 'https://developers.facebook.com/docs/opengraph/'       -->
+    <meta property="og:title" content="MessyTube for Facebook" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://apps.facebook.com/messytube/" />
+    <meta property="og:image" content="http://messytube.herokuapp.com/images/DJMessyGreenLaserYoutube.jpg" />
+    <meta property="og:site_name" content="MessyTube" />
+    <meta property="og:description" content="DJ Messy's YouTube Channel" />
+    <meta property="fb:app_id" content="490019527740859" />
+
+    <script type="text/javascript" src="https://messytube.herokuapp.com/scripts/jquery.min.js"></script>
+    <script type="text/javascript">
+	 function logResponse(response) {
+	   // Event Logging:
+		if (console && console.log) {
+		  console.log('The response was', response);
+		}
+	 }
+	  $(function(){
+		// Event Handlers For FB Share Buttons
+		// Post To Wall:
+		$('#postToWall').click(function() {
+			FB.ui(
+			{
+              method : 'feed',
+              link   : $(this).attr('data-url')
+            },
+            function (response) {
+              // If response is null the user canceled the dialog
+              if (response != null) {
+                logResponse(response);
+              }
+            }
+			);
+        });
+		// Send To Friends:
+        $('#sendToFriends').click(function() {
+			FB.ui(
+            {
+              method : 'send',
+              link   : $(this).attr('data-url')
+            },
+            function (response) {
+              // If response is null the user canceled the dialog
+              if (response != null) {
+                logResponse(response);
+              }
+            }
+          );
+        });
+		// Send App Request:
+			$('#sendRequest').click(function() {
+			 FB.ui({
+              method  : 'apprequests',
+              message : $(this).attr('data-message')
+             },
+            function (response) {
+              // If response is null the user canceled the dialog
+              if (response != null) {
+                logResponse(response);
+              }
+            }
+          );
+			});
+        });
+    </script>
+    <!--[if IE]>
+      <script type="text/javascript">
+        var tags = ['header', 'section'];
+        while(tags.length)
+          document.createElement(tags.pop());
+      </script>
+    <![endif]-->
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '490019527740859',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+
+    // ADD ADDITIONAL FACEBOOK CODE BELOW HERE
+	FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    console.log('Logged in.'); 
+	document.write('<html>');
+	document.write('<head>');
+	document.write('<title>Messytube Extras</title>');
+	document.write('<link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/screen.css" media="Screen" type="text/css" />');
+	document.write('<link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />');
+	document.write('</head>');
+	document.write('<body>');
+	document.write('<header class="clearfix">');
+	document.write('<div align="center">');
+	document.write('<img src="/images/DJMessyGreenLaserYoutube.jpg">');
+	document.write('</div>');
+	document.write('</header>');
+	document.write('<div align="center">');
+	document.write('<h2>MessyTube Extras</h2>');
+	document.write('');
+	document.write('<h1>LOGGED IN</h1>');
+	document.write('<br />');
+	document.write('<br />');
+	document.write('</div>');
+	document.write('</body>');
+	document.write('</html>');
+  }
+  else {
+	document.write('<html>');
+	document.write('<head>');
+	document.write('<title>Messytube Extras</title>');
+	document.write('<link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/screen.css" media="Screen" type="text/css" />');
+	document.write('<link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />');
+	document.write('</head>');
+	document.write('<body>');
+	document.write('<header class="clearfix">');
+	document.write('<div align="center">');
+	document.write('<img src="/images/DJMessyGreenLaserYoutube.jpg">');
+	document.write('</div>');
+	document.write('</header>');
+	document.write('<div align="center">');
+	document.write('<h2>MessyTube Extras</h2>');
+	document.write('');
+	document.write('<h1>PLEASE LOG IN</h1>');
+	document.write('<br />');
+	document.write('<br />');
+	document.write('</div>');
+	document.write('</body>');
+	document.write('</html>');
+    FB.login();
+  }
+});
+	// Place following code after FB.init call.
+
+    // ADD ADDITIONAL FACEBOOK CODE ABOVE HERE
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+  
+   		<div align="center">
+			
+		</div>
+  </header>
+</body>
+</html>
