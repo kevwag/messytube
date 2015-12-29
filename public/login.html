@@ -106,9 +106,11 @@
     // ADD ADDITIONAL FACEBOOK CODE BELOW HERE
 	FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
-    console.log('Logged in.');
+    console.log('Logged in.'); 
+	document.write('<h1>You are LOGGED IN</h1>');
   }
   else {
+	  document.write('<h1>You need to LOGIN</h1>');
     FB.login();
   }
 });
