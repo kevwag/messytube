@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
 
     <title>MessyTube</title>
-    <link rel="stylesheet" href="stylesheets/screen.css" media="Screen" type="text/css" />
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />
+    <link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/screen.css" media="Screen" type="text/css" />
+    <link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />
 
     <!--[if IEMobile]>
     <link rel="stylesheet" href="mobile.css" media="screen" type="text/css"  />
@@ -28,7 +28,7 @@
     <meta property="og:description" content="DJ Messy's YouTube Channel" />
     <meta property="fb:app_id" content="490019527740859" />
 
-    <script type="text/javascript" src="/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="https://messytube.herokuapp.com/scripts/jquery.min.js"></script>
 	<!-- Thumbnail Script -->
 	<script type="text/javascript">
 		$("document").ready(function() {
@@ -159,7 +159,7 @@ FB.getLoginStatus(function(response) {
         <h1>Welcome, <strong><%= user.name %></strong></h1>
         <p class="tagline">
           This is:
-          <a href="http://apps.facebook.com/messytube/" target="_top">MessyTube</a>
+          <a href="https://www.facebook.com/messytube/app_490019527740859?ref=page_internal" target="_top">MessyTube</a>
         </p>
 
         <div id="share-app">
@@ -204,6 +204,8 @@ FB.getLoginStatus(function(response) {
 			var insertBrk = 1;
 			var arrayOfVideos =
 			["3B6PCpjBVS8","I6n7gbIYwwA","3H8h_Bj9Z18","jK3KfzpuO7s"];
+			var arrayOfTitles =
+			["Hard Trance","Hardstyle","hard Trance","Hardstyle"]
 			document.write('<br />');
 			for(i in arrayOfVideos)
 			{
@@ -211,6 +213,11 @@ FB.getLoginStatus(function(response) {
 				if(insertBrk == 3)
 					{
 						document.write('<br />');
+						document.write('<font size="-1" color="green">' + arrayOfTitles[i-2] + '</font>');
+						document.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+						document.write('<font size="-1" color="green">' + arrayOfTitles[i-1] + '</font>');
+						document.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+						document.write('<font size="-1" color="green">' + arrayOfTitles[i] + '</font>');
 						insertBrk = 0;
 					}
 				insertBrk++;
