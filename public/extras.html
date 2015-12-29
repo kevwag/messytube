@@ -130,17 +130,19 @@
 			<img src="/images/DJMessyGreenLaserYoutube.jpg">
 		</div>
   </header>
- <!-- <% if (user) { %>-->
- <div align="center"" id= "loggedIn">
-    <h1 id="fb-welcome">YES</h1>
+ <% if (user) { %>
+ <div align="center">
+    <h1 id="fb-welcome"></h1>
  	Logged IN
  </div>
- <!-- <% } else { %> -->
- <div align="center" id="notLoggedIn">
+ <% } else { %>
+ <div align="center">
  	Please Login
-    
+	    <div class="fb-login-button" data-scope="user_about_me,user_location,user_photos"></div>
+    	<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+
  </div>
  
-<!-- <% } %> -->
+<% } %>
 </body>
 </html>
