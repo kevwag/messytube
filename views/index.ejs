@@ -43,68 +43,6 @@
 	</script>
 	<!-- End Of Thumbnail Script -->
 	<!-- Event Handling: -->
-    <script type="text/javascript">
-	 function logResponse(response) {
-	   // Event Logging:
-		if (console && console.log) {
-		  console.log('The response was', response);
-		}
-	 }
-	  $(function(){
-		// Event Handlers For FB Share Buttons
-		// Post To Wall:
-		$('#postToWall').click(function() {
-			FB.ui(
-			{
-              method : 'feed',
-              link   : $(this).attr('data-url')
-            },
-            function (response) {
-              // If response is null the user canceled the dialog
-              if (response != null) {
-                logResponse(response);
-              }
-            }
-			);
-        });
-		// Send To Friends:
-        $('#sendToFriends').click(function() {
-			FB.ui(
-            {
-              method : 'send',
-              link   : $(this).attr('data-url')
-            },
-            function (response) {
-              // If response is null the user canceled the dialog
-              if (response != null) {
-                logResponse(response);
-              }
-            }
-          );
-        });
-		// Send App Request:
-			$('#sendRequest').click(function() {
-			 FB.ui({
-              method  : 'apprequests',
-              message : $(this).attr('data-message')
-             },
-            function (response) {
-              // If response is null the user canceled the dialog
-              if (response != null) {
-                logResponse(response);
-              }
-            }
-          );
-			});
-        });
-    </script>
-    <!--[if IE]>
-      <script type="text/javascript">
-        var tags = ['header', 'section'];
-        while(tags.length)
-          document.createElement(tags.pop());
-      </script>
-    <![endif]-->
   </head>
   <body bgcolor="#000000">
 <script>
