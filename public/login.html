@@ -107,10 +107,50 @@
 	FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     console.log('Logged in.'); 
-	document.write('<h1>You are LOGGED IN</h1>');
+	document.write('<html>');
+	document.write('<head>');
+	document.write('<title>Messytube Extras</title>');
+	document.write('<link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/screen.css" media="Screen" type="text/css" />');
+	document.write('<link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />');
+	document.write('</head>');
+	document.write('<body>');
+	document.write('<header class="clearfix">');
+	document.write('<div align="center">');
+	document.write('<img src="/images/DJMessyGreenLaserYoutube.jpg">');
+	document.write('</div>');
+	document.write('</header>');
+	document.write('<div align="center">');
+	document.write('<h2>MessyTube Extras</h2>');
+	document.write('');
+	document.write('<h1>LOGGED IN</h1>');
+	document.write('<br />');
+	document.write('<br />');
+	document.write('</div>');
+	document.write('</body>');
+	document.write('</html>');
   }
   else {
-	  document.write('<h1>You need to LOGIN</h1>');
+	document.write('<html>');
+	document.write('<head>');
+	document.write('<title>Messytube Extras</title>');
+	document.write('<link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/screen.css" media="Screen" type="text/css" />');
+	document.write('<link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />');
+	document.write('</head>');
+	document.write('<body>');
+	document.write('<header class="clearfix">');
+	document.write('<div align="center">');
+	document.write('<img src="/images/DJMessyGreenLaserYoutube.jpg">');
+	document.write('</div>');
+	document.write('</header>');
+	document.write('<div align="center">');
+	document.write('<h2>MessyTube Extras</h2>');
+	document.write('');
+	document.write('<h1>PLEASE LOG IN</h1>');
+	document.write('<br />');
+	document.write('<br />');
+	document.write('</div>');
+	document.write('</body>');
+	document.write('</html>');
     FB.login();
   }
 });
@@ -127,24 +167,10 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-  <header class="clearfix">
+  
    		<div align="center">
-			<img src="/images/DJMessyGreenLaserYoutube.jpg">
+			
 		</div>
   </header>
- <% if (user) { %>
- <div align="center">
-    <h1 id="fb-welcome"></h1>
- 	Logged IN
- </div>
- <% } else { %>
- <div align="center">
- 	Please Login
-	    <div class="fb-login-button" data-scope="user_about_me,user_location,user_photos"></div>
-    	<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
-
- </div>
- 
-<% } %>
 </body>
 </html>
