@@ -155,41 +155,7 @@ FB.getLoginStatus(function(response) {
 			<img src="/images/DJMessyGreenLaserYoutube.jpg">
 		</div>
   </header>
-	    <!-- <% if (user) { %>--> -->
-      <p id="picture" style="background-image: url(https://graph.facebook.com/<%= user.id %>/picture?type=normal)"></p>
-
-      <div>
-        <h1>Welcome, <strong><%= user.name %></strong></h1>
-        <p class="tagline">
-          This is:
-          <a href="https://www.facebook.com/messytube/app_490019527740859?ref=page_internal" target="_top">MessyTube</a>
-        </p>
-
-        <div id="share-app">
-          <p>Please Share This App:</p>
-          <ul>
-            <li>
-              <a href="#" class="facebook-button" id="postToWall" data-url="http://apps.facebook.com/messytube/">
-                <span class="plus">Post to Wall</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="http://apps.facebook.com/messytube/">
-                <span class="speech-bubble">Send Message <%= url() %></span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Please try my app">
-                <span class="apprequests">Send Requests</span>
-              </a>
-            </li>
-          </ul>
-		 
-        </div>
-      </div>
-	 
-      <!-- <% } else { %> -->
-     	<fb:bookmark></fb:bookmark>
+	     	<fb:bookmark></fb:bookmark>
     			<div id="topVideo" align="center">
 				<iframe id="ytVideo" width="560" height="315" style="float:center" src="https://www.youtube.com/embed/3B6PCpjBVS8?wmode=transparent" allowfullscreen></iframe>
 			</div>
@@ -225,31 +191,8 @@ FB.getLoginStatus(function(response) {
 		<br />
 		<br />
 	</div>
-    <div align="center">
-	  <div id="share-app" align="center">
-            <p><h3>Please share this app:</h3></p>
-			<p align="center">
-            <a href="#" class="facebook-button" id="postToWall" data-url="http://apps.facebook.com/messytube/">
-            <span class="plus">Post to Wall</span>
-            </a>
-            <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="http://apps.facebook.com/messytube/">
-            <span class="speech-bubble">Send Message</span>
-            </a>
-            <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Please Try My YouTube App!">
-            <span class="apprequests">Send Requests</span>
-            </a>
-			</p>
-			<br />
-			<p align="center">
-			<div class="fb-like" data-href="https://apps.facebook.com/messytube/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="verdana"></div>      
-			</p>
-			</div>
-	  	
-	</div>
 	<br />
 	</div>
-	<!-- <% } %> -->
-	<br />
 	<footer>
 	  <div align="center">
 		<div id="fbcomments" align="center" valign="middle" width="0" height="260px"><fb:comments migrated="1" colorscheme="dark" height="260px" numposts="3" title="Comments" simple="1" align="center"></fb:comments></div>
