@@ -184,7 +184,8 @@ header .tagline {
 
 #soundCloud {
 	width: 550px;
-	align: center;
+	float: center;
+	align: middle;
 	border-style: solid;
 	border-color: #00FF00;
 	border-width: 4px;
@@ -283,6 +284,16 @@ header .tagline {
 /* =clearfix
 --------------------------------------------- */
 .clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	visibility: visible;
+}
+
+.clearfix:before {
 	clear: both;
 	content: ".";
 	display: block;
