@@ -108,7 +108,20 @@
 					}
 				insertBrk++;
 			}
-		
+			if(insertBrk == 3)
+				{
+					document.write('<br />');
+					document.write('<h2>' + arrayOfTitles[i-1] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + arrayOfTitles [i] + '</h2>');
+					document.write('<br />');
+					insertBrk = 0;
+				}
+			if(insertBrk == 2)
+				{
+					document.write('<br />');
+					document.write('<h2>' + arrayOfTitles[i] + '</h2>');
+					document.write('<br />');
+					insertBrk = 0;
+				}
 		</script>
 		<br />
 		<br />
