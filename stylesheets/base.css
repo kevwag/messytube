@@ -187,6 +187,9 @@ header .tagline {
 	border-style: solid;
 	border-color: #00FF00;
 	border-width: 4px;
+	margin: 5px;
+	margin-right: 20px;
+	margin-left: 22px;
 	border-radius: 15px;
 }
 
@@ -195,6 +198,9 @@ header .tagline {
 	border-style: solid;
 	border-color: #00FF00;
 	border-width: 4px;
+	margin: 5px;
+	margin-right: 20px;
+	margin-left: 22px;
 	border-radius: 15px;
 }
 
