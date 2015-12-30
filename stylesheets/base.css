@@ -182,23 +182,19 @@ header .tagline {
 	border-radius: 15px;
 }
 
-.soundCloud {
+#soundCloud {
+	float: center;
 	border-style: solid;
 	border-color: #00FF00;
-	border-width: 3px;
-	margin: 5px;
-	margin-right: 20px;
-	margin-left: 22px;
+	border-width: 4px;
 	border-radius: 15px;
 }
 
-.mixCloud {
+#mixCloud {
+	float: center;
 	border-style: solid;
 	border-color: #00FF00;
-	border-width: 3px;
-	margin: 5px;
-	margin-right: 20px;
-	margin-left: 22px;
+	border-width: 4px;
 	border-radius: 15px;
 }
 
