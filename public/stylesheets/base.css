@@ -182,6 +182,27 @@ header .tagline {
 	border-radius: 15px;
 }
 
+.soundCloud {
+	border-style: solid;
+	border-color: #00FF00;
+	border-width: 3px;
+	margin: 5px;
+	margin-right: 20px;
+	margin-left: 22px;
+	border-radius: 15px;
+}
+
+.mixCloud {
+	border-style: solid;
+	border-color: #00FF00;
+	border-width: 3px;
+	margin: 5px;
+	margin-right: 20px;
+	margin-left: 22px;
+	border-radius: 15px;
+}
+
+
 /* ------------------------------------------ */
 
 /* =buttons

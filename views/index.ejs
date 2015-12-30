@@ -68,21 +68,20 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
   <header class="clearfix">
-   		<div align="center">
-			<img src="/images/DJMessyGreenLaserYoutube.jpg">
-		</div>
-		<div align="center">
-		  <h2><a href="https://messytube.herokuapp.com/extras.html">Click HERE for MessyTube Extras!</a></h2>
-		</div>
+   	<div align="center">
+	  <img src="/images/DJMessyGreenLaserYoutube.jpg">
+	</div>
   </header>
-		
-    			<div id="topVideo" align="center">
-				<iframe id="ytVideo" width="560" height="315" style="float:center" src="https://www.youtube.com/embed/3B6PCpjBVS8?wmode=transparent" allowfullscreen></iframe>
-			</div>
+	<div align="center">
+	  <h2><a href="https://messytube.herokuapp.com/extras.html">Click HERE for MessyTube Extras!</a></h2>
+	</div>
+	<div id="topVideo" align="center">
+	  <iframe id="ytVideo" width="560" height="315" style="float:center" src="https://www.youtube.com/embed/3B6PCpjBVS8?wmode=transparent" allowfullscreen></iframe>
+	</div>
 	<div align="center">
 	  <p>
-	   <br />
-	   <h2>DJ Messy's YouTube Channel - Click the Thumbnails to select video:</h2>
+	  <br />
+	  <h2>DJ Messy's YouTube Channel - Click the Thumbnails to select video:</h2>
 		<script type="text/javascript">
 	
 			var insertBrk = 1;
@@ -108,7 +107,13 @@
 		<br />
 		<br />
 	</div>
-	<br />
+	<div align="center">
+	<% if (user) { %>
+		<h2>LOGGED IN</h2>
+	<% } else { %>
+		<h2>NOT LOGGED IN</h2>
+		<fb:login-button show-faces="false" width="200" max-rows="1"></fb:login-button>
+	<% } %>
 	</div>
 	<footer>
 	  <div align="center">
