@@ -183,6 +183,7 @@ header .tagline {
 }
 
 #soundCloud {
+	width: 550px;
 	float: center;
 	border-style: solid;
 	border-color: #00FF00;
@@ -194,6 +195,7 @@ header .tagline {
 }
 
 #mixCloud {
+	width: 550px;
 	float: center;
 	border-style: solid;
 	border-color: #00FF00;
