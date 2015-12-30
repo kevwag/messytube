@@ -75,6 +75,7 @@
 	<div align="center">
 	  <h2><a href="https://messytube.herokuapp.com/extras.html">Click HERE for MessyTube Extras!</a></h2>
 	</div>
+	<% if (user) { %>
 	<div id="topVideo" align="center">
 	  <iframe id="ytVideo" width="560" height="315" style="float:center" src="https://www.youtube.com/embed/3B6PCpjBVS8?wmode=transparent" allowfullscreen></iframe>
 	</div>
@@ -108,17 +109,21 @@
 		<br />
 	</div>
 	<div align="center">
-	<% if (user) { %>
 		<h2>LOGGED IN</h2>
+	</div>
 	<% } else { %>
+	<div align="center">
 		<h2>NOT LOGGED IN</h2>
 		<fb:login-button show-faces="false" width="200" max-rows="1"></fb:login-button>
-	<% } %>
 	</div>
+	<% } %>
 	<footer>
+	<% if (user) { %>
 	  <div align="center">
 		<div id="fbcomments" align="center" valign="middle" width="0" height="260px"><fb:comments migrated="1" colorscheme="dark" height="260px" numposts="3" title="Comments" simple="1" align="center"></fb:comments></div>
 	  </div>
+	<% } else { %>
+	<% } %>
 	</footer
   </body>
 </html>
