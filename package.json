@@ -4,8 +4,6 @@
   "description": "Template app for Heroku / Facebook integration, Node.js language",
   "dependencies": {
     "async": "0.1.18",
-    "bundle": "0.2.3",
-    "bundles": "2.0.0",
     "ejs": "0.4.3",
     "engines": "0.4.0",
     "express": "2.4.6",
@@ -22,12 +20,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heroku/messytube.git"
+    "url": "git+https://github.com/kevwag/messytube.git"
   },
   "author": "Kevin Wagener",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/heroku/messytube/issues"
+    "url": "https://github.com/kevwag/messytube/issues"
   },
-  "homepage": "https://github.com/heroku/facebook-template-nodejs#readme"
+  "homepage": "https://github.com/kevwag/messytube#readme",
+  "keywords": [
+    "Embed",
+    "YouTube",
+    "Video",
+    "Facebook"
+  ]
 }
