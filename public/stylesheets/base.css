@@ -30,7 +30,7 @@ body {
 }
 
 a:link, a:visited {
-  color: #FFFF00;
+  color: #FFFFFF;
   font-weight: bold;
   text-decoration: none;
 }
@@ -148,19 +148,6 @@ header .tagline {
 	height: *;
 	float: center;
 	text-align: center;
-	color: #ffffff
-	border-style: solid;
-	border-color: #00FF00;
-	border-width: 4px;
-	border-radius: 15px;
-}
-
-.fb-comments {
-	width: 550px;
-	height: *;
-	float: center;
-	text-align: center;
-	color: #ffffff
 	border-style: solid;
 	border-color: #00FF00;
 	border-width: 4px;
@@ -220,7 +207,6 @@ header .tagline {
 	border-radius: 15px;
 	overflow: hidden;
 }
-
 
 /* ------------------------------------------ */
 
@@ -298,16 +284,6 @@ header .tagline {
 /* =clearfix
 --------------------------------------------- */
 .clearfix:after {
-	clear: both;
-	content: ".";
-	display: block;
-	font-size: 0;
-	height: 0;
-	line-height: 0;
-	visibility: visible;
-}
-
-.clearfix:before {
 	clear: both;
 	content: ".";
 	display: block;
