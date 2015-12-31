@@ -30,7 +30,7 @@ body {
 }
 
 a:link, a:visited {
-  color: #FFFFFF;
+  color: #FFFF00;
   font-weight: bold;
   text-decoration: none;
 }
@@ -152,6 +152,16 @@ header .tagline {
 	border-color: #00FF00;
 	border-width: 4px;
 	border-radius: 15px;
+
+.fbcomments {
+	width: 550px;
+	height: *;
+	float: center;
+	text-align: center;
+	border-style: solid;
+	border-color: #00FF00;
+	border-width: 4px;
+	border-radius: 15px;
 }
 
 /* ------------------------------------------ */
@@ -184,7 +194,7 @@ header .tagline {
 
 #soundCloud {
 	width: 550px;
-	align: center;
+	float: center;
 	border-style: solid;
 	border-color: #00FF00;
 	border-width: 4px;
@@ -196,7 +206,7 @@ header .tagline {
 
 #mixCloud {
 	width: 550px;
-	align: center;
+	float: center;
 	border-style: solid;
 	border-color: #00FF00;
 	border-width: 4px;
