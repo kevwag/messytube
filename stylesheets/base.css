@@ -204,6 +204,7 @@ header .tagline {
 	margin-right: 20px;
 	margin-left: 22px;
 	border-radius: 15px;
+	overflow: hidden;
 }
 
 #mixCloud {
@@ -216,6 +217,7 @@ header .tagline {
 	margin-right: 20px;
 	margin-left: 22px;
 	border-radius: 15px;
+	overflow: hidden;
 }
 
 
@@ -295,6 +297,16 @@ header .tagline {
 /* =clearfix
 --------------------------------------------- */
 .clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	visibility: visible;
+}
+
+.clearfix:before {
 	clear: both;
 	content: ".";
 	display: block;
