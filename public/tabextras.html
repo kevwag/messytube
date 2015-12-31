@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<style type="text/css">
+	</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Messytube Extras Tab</title>
+    <link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/screen.css" media="Screen" type="text/css" />
+    <link rel="stylesheet" href="https://messytube.herokuapp.com/stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />
+
+    <!--[if IEMobile]>
+    <link rel="stylesheet" href="mobile.css" media="screen" type="text/css"  />
+    <![endif]-->
+
+    <!-- These are Open Graph tags.  They add meta data to your  -->
+    <!-- site that facebook uses when your content is shared     -->
+    <!-- over facebook.  You should fill these tags in with      -->
+
+    <!-- your data.  To learn more about Open Graph, visit       -->
+    <!-- 'https://developers.facebook.com/docs/opengraph/'       -->
+    <meta property="og:title" content="MessyTube for Facebook" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://apps.facebook.com/messytube/" />
+    <meta property="og:image" content="https://messytube.herokuapp.com/images/DJMessyGreenLaserYoutube.jpg" />
+    <meta property="og:site_name" content="MessyTube" />
+    <meta property="og:description" content="DJ Messy's YouTube Channel" />
+    <meta property="fb:app_id" content="490019527740859" />
+
+    <script type="text/javascript" src="https://messytube.herokuapp.com/scripts/jquery.min.js"></script>
+    <script type="text/javascript">
+	 function logResponse(response) {
+	   // Event Logging:
+		if (console && console.log) {
+		  console.log('The response was', response);
+		}
+	 }
+	  $(function(){
+		// Event Handlers For FB Share Buttons
+		// Post To Wall:
+		$('#postToWall').click(function() {
+			FB.ui(
+			{
+              method : 'feed',
+              link   : $(this).attr('data-url')
+            },
+            function (response) {
+              // If response is null the user canceled the dialog
+              if (response != null) {
+                logResponse(response);
+              }
+            }
+			);
+        });
+		// Send To Friends:
+        $('#sendToFriends').click(function() {
+			FB.ui(
+            {
+              method : 'send',
+              link   : $(this).attr('data-url')
+            },
+            function (response) {
+              // If response is null the user canceled the dialog
+              if (response != null) {
+                logResponse(response);
+              }
+            }
+          );
+        });
+		// Send App Request:
+			$('#sendRequest').click(function() {
+			 FB.ui({
+              method  : 'apprequests',
+              message : $(this).attr('data-message')
+             },
+            function (response) {
+              // If response is null the user canceled the dialog
+              if (response != null) {
+                logResponse(response);
+              }
+            }
+          );
+			});
+        });
+    </script>
+    <!--[if IE]>
+      <script type="text/javascript">
+        var tags = ['header', 'section'];
+        while(tags.length)
+          document.createElement(tags.pop());
+      </script>
+    <![endif]-->
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '490019527740859',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+
+    // ADD ADDITIONAL FACEBOOK CODE BELOW HERE
+	FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    console.log('Logged in.');
+  }
+  else {
+    FB.login();
+  }
+});
+	// Place following code after FB.init call.
+
+    // ADD ADDITIONAL FACEBOOK CODE ABOVE HERE
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<header class="clearfix">
+<div align="center">
+<h2>Click <a href="https://messytube.herokuapp.com/tab.html" target="_self">HERE</a> To Return To <a href="https://messytube.herokuapp.com/tab.html" target="_self">MessyTube</a></h2>
+</div>
+</header>
+<div align="center">
+<h1>DJ Messy's <a href="https://soundcloud.com/dj-messy-uk" target="_blank">Soundcloud</a> Content</h1>
+<div id="soundCloud" align="center" width="80%">
+<iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/10475333&amp;color=00ff00&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+</div>
+</div>
+<br />
+<div align="center">
+<h1>DJ Messy's <a href="https://www.mixcloud.com/kevin-wagener/" target="_blank">MixCloud</a> Content</h1>
+<div id="mixCloud" align="center" width="80%">
+<iframe width="95%" height="60" src="https://www.mixcloud.com/widget/iframe/?embed_type=widget_standard&amp;embed_uuid=0df2f359-7550-4de4-b2fc-6e83db6ab358&amp;feed=https%3A%2F%2Fwww.mixcloud.com%2Fkevin-wagener%2Fmessys-presence-hard-trance-minimix-december-2015%2F&amp;hide_cover=1&amp;hide_tracklist=1&amp;mini=1&amp;replace=0" frameborder="0"></iframe>
+<br />
+<iframe width="95%" height="60" src="https://www.mixcloud.com/widget/iframe/?embed_type=widget_standard&amp;embed_uuid=717a356a-908e-4d33-9080-db964afa1e89&amp;feed=https%3A%2F%2Fwww.mixcloud.com%2Fkevin-wagener%2Fmessy-euphoria-hardcore-2006%2F&amp;hide_cover=1&amp;hide_tracklist=1&amp;mini=1&amp;replace=0" frameborder="0"></iframe>
+<br />
+<iframe width="95%" height="60" src="https://www.mixcloud.com/widget/iframe/?embed_type=widget_standard&amp;embed_uuid=7a36fa45-8254-4713-8860-387a18091382&amp;feed=https%3A%2F%2Fwww.mixcloud.com%2Fkevin-wagener%2Fdj-messys-hardstyle-anthems-2015%2F&amp;hide_cover=1&amp;hide_tracklist=1&amp;mini=1&amp;replace=0" frameborder="0"></iframe>
+<br />
+<iframe width="95%" height="60" src="https://www.mixcloud.com/widget/iframe/?embed_type=widget_standard&amp;embed_uuid=4b6c42c4-2ed3-4e21-8b63-0b7539960614&amp;feed=https%3A%2F%2Fwww.mixcloud.com%2Fkevin-wagener%2Fdj-messy-hardstyle-mix-17-10-13%2F&amp;hide_cover=1&amp;hide_tracklist=1&amp;mini=1&amp;replace=0" frameborder="0"></iframe>
+</div>
+</div>
+<br />
+<footer class="clearfix">
+  <div align="center">
+<!-- //  <div id="fbcomments" align="center" valign="middle" width="0" height="260px"><fb:comments migrated="1" colorscheme="dark" height="260px" numposts="3" title="Comments" simple="1" align="center"></fb:comments></div> -->
+  <div class="fb-comments" id="fbcomments" align="center" data-href="https://messytube.herokuapp.com/extras.html" data-width="550" colorscheme="dark" data-numposts="5"></div>
+  </div>
+</footer>
+</body>
+</html>
