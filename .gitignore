@@ -5,6 +5,9 @@
 logs
 *.log
 
+# Test folder
+test
+
 # Runtime data
 pids
 *.pid
